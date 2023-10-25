@@ -1,0 +1,43 @@
+iice new {IICE7} -type regular
+iice controller -iice {IICE7} none
+iice sampler -iice {IICE7} -depth 16384
+iice sampler -iice {IICE7} -pipe 3
+iice clock -iice {IICE7} -edge positive {/clk_glb5}
+signals add -iice {IICE7} -silent -sample -trigger
+{/u0_digital_top/u0_mm_sys_hard_macro/u_mm_sys/u0_dispc_sys_top/u0_cdns_dsitx_top/dsi_tx_byte_hs_clk}\
+{/u0_digital_top/u0_mm_sys_hard_macro/u_mm_sys/u0_dispc_sys_top/u0_cdns_dsitx_top/dsi_p_clk}\
+{/u0_digital_top/u0_mm_sys_hard_macro/u_mm_sys/u0_dispc_sys_top/u0_cdns_dsitx_top/dsi_tx_esc_clk}\
+{/u0_digital_top/u0_mm_sys_hard_macro/u_mm_sys/u0_dispc_sys_top/u0_cdns_dsitx_top/dsi_rx_esc_clk}\
+{/u0_digital_top/u0_mm_sys_hard_macro/u_mm_sys/u0_dispc_sys_top/u0_cdns_dsitx_top/dsi_p_rst_n}\
+{/u0_digital_top/u0_mm_sys_hard_macro/u_mm_sys/u0_dispc_sys_top/u0_cdns_dsitx_top/dsi_tx_esc_rst_n}\
+{/u0_digital_top/u0_mm_sys_hard_macro/u_mm_sys/u0_dispc_sys_top/u0_cdns_dsitx_top/dsi_sys_rst_n}\
+{/u0_digital_top/u0_mm_sys_hard_macro/u_mm_sys/u0_dispc_sys_top/u0_cdns_dsitx_top/dsi_tx_byte_hs_rst_n}\
+{/u0_digital_top/u0_mm_sys_hard_macro/u_mm_sys/u0_dispc_sys_top/u0_cdns_dsitx_top/dsi_rx_esc_rst_n}\
+{/u0_digital_top/u0_mm_sys_hard_macro/u_mm_sys/u0_dispc_sys_top/pclk_dsi0_eb}\
+{/u0_digital_top/u0_mm_sys_hard_macro/u_mm_sys/u0_dispc_sys_top/clk_dsi_tx_esc0_eb}\
+{/u0_digital_top/u0_mm_sys_hard_macro/u_mm_sys/u0_dispc_sys_top/clk_dsi_sys0_eb}\
+{/u0_digital_top/u0_mm_sys_hard_macro/u_mm_sys/u0_dispc_sys_top/clk_dphy2dsi_hs0_eb}\
+{/u0_digital_top/u0_mm_sys_hard_macro/u_mm_sys/u0_dispc_sys_top/u0_cdns_dsitx_top/dsi_dpi_pixel_clk}\
+{/u0_digital_top/u0_mm_sys_hard_macro/u_mm_sys/u0_dispc_sys_top/u0_cdns_dsitx_top/dsi_dpi_pixel_rst_n}\
+{/u0_digital_top/u0_mm_sys_hard_macro/u_mm_sys/u0_dispc_sys_top/u0_cdns_dsitx_top/dsi_dpi_vsync}\
+{/u0_digital_top/u0_mm_sys_hard_macro/u_mm_sys/u0_dispc_sys_top/u0_cdns_dsitx_top/dsi_dpi_hsync}\
+{/u0_digital_top/u0_mm_sys_hard_macro/u_mm_sys/u0_dispc_sys_top/u0_cdns_dsitx_top/dsi_dpi_de}\
+{/u0_digital_top/u0_mm_sys_hard_macro/u_mm_sys/u0_dispc_sys_top/u0_cdns_dsitx_top/dsi_dpi_data}\
+{/u0_digital_top/u0_mm_sys_hard_macro/u_mm_sys/u0_dispc_sys_top/u0_cdns_dsitx_top/dsi_ppi_c_enable}\
+{/u0_digital_top/u0_mm_sys_hard_macro/u_mm_sys/u0_dispc_sys_top/u0_cdns_dsitx_top/dsi_ppi_d_enable}\
+{/u0_digital_top/u0_mm_sys_hard_macro/u_mm_sys/u0_dispc_sys_top/u0_cdns_dsitx_top/dsi_ppi_c_tx_ready_hs}\
+{/u0_digital_top/u0_mm_sys_hard_macro/u_mm_sys/u0_dispc_sys_top/u0_cdns_dsitx_top/dsi_dphy_pll_lock}\
+{/u0_digital_top/u0_mm_sys_hard_macro/u_mm_sys/u0_dispc_sys_top/u0_cdns_dsitx_top/dsi_dpi_fifo_push_ad}\
+{/u0_digital_top/u0_mm_sys_hard_macro/u_mm_sys/u0_dispc_sys_top/u0_cdns_dsitx_top/dsi_dpi_fifo_push_da}\
+{/u0_digital_top/u0_mm_sys_hard_macro/u_mm_sys/u0_dispc_sys_top/u0_cdns_dsitx_top/dsi_dpi_fifo_wren}\
+{/u0_digital_top/u0_mm_sys_hard_macro/u_mm_sys/u0_dispc_sys_top/u0_cdns_dsitx_top/dsi_dpi_fifo_pop_ad}\
+{/u0_digital_top/u0_mm_sys_hard_macro/u_mm_sys/u0_dispc_sys_top/u0_cdns_dsitx_top/dsi_dpi_fifo_rden}\
+{/u0_digital_top/u0_mm_sys_hard_macro/u_mm_sys/u0_dispc_sys_top/u0_cdns_dsitx_top/dsi_dpi_fifo_pop_da}\
+{/u0_digital_top/u0_mm_sys_hard_macro/u_mm_sys/u0_dispc_sys_top/u0_cdns_dsitx_top/dsi_ppi_d_tx_req_hs}\
+{/u0_digital_top/u0_mm_sys_hard_macro/u_mm_sys/u0_dispc_sys_top/u0_cdns_dsitx_top/dsi_ppi_d_tx_ready_hs}\
+{/u0_digital_top/u0_mm_sys_hard_macro/u_mm_sys/u0_dispc_sys_top/u0_cdns_dsitx_top/dsi_ppi_d_tx_data_h}\
+{/u0_digital_top/u0_mm_sys_hard_macro/u_mm_sys/u0_dispc_sys_top/u0_cdns_dsitx_top/cdns_dsi_lnk_inst/cdns_dsi_cb_top_inst/reg_vsm_line_pos}\
+{/u0_digital_top/u0_mm_sys_hard_macro/u_mm_sys/u0_dispc_sys_top/u0_cdns_dsitx_top/cdns_dsi_lnk_inst/cdns_dsi_cb_top_inst/reg_vsm_line_val}\
+{/u0_digital_top/u0_mm_sys_hard_macro/u_mm_sys/u0_dispc_sys_top/u0_cdns_dsitx_top/cdns_dsi_lnk_inst/cdns_dsi_cb_top_inst/reg_vsm_hor_pos}\
+{/u0_digital_top/u0_mm_sys_hard_macro/u_mm_sys/u0_dispc_sys_top/u0_cdns_dsitx_top/cdns_dsi_lnk_inst/cdns_dsi_cb_top_inst/reg_vsm_hor_val}\
+{/u0_digital_top/u0_mm_sys_hard_macro/u_mm_sys/u0_dispc_sys_top/u0_cdns_dsitx_top/cdns_dsi_lnk_inst/cdns_dsi_cb_top_inst/reg_vsm_sts}

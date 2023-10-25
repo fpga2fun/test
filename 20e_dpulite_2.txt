@@ -1,0 +1,92 @@
+#include <stdio.h>
+#include "mc20e_ccode_sim.h"
+int main () 
+
+{
+ 
+//dpu_lite dpi 
+*((volatile unsigned int *)0x10030004)= 0x00005f7f;
+/*common_glb*/
+*((volatile unsigned int *)0x2340490 )= 0x00000018;
+*((volatile unsigned int *)0x234048c )= 0x00000007;
+*((volatile unsigned int *)0x10038014)= 0x0c000000;
+*((volatile unsigned int *)0x100381b8)= 0x00000060;
+*((volatile unsigned int *)0x100341b8)= 0x00000001;
+*((volatile unsigned int *)0x10034004)= 0x00000081;
+*((volatile unsigned int *)0x234005c )= 0x18000000;
+
+/*mm_core*/
+*((volatile unsigned int *)0x4430004 )= 0x0000000F;
+*((volatile unsigned int *)0x4430008 )= 0x001FFFFF;
+*((volatile unsigned int *)0x443000C )= 0x000003FF;
+*((volatile unsigned int *)0x4430010 )= 0x00000000;
+                                     
+*((volatile unsigned int *)0x443008c )= 0x00000022;
+*((volatile unsigned int *)0x4430090 )= 0x000190A6;
+*((volatile unsigned int *)0x4430094 )= 0x0003A12A;
+*((volatile unsigned int *)0x4430098 )= 0x0005B1AE;
+*((volatile unsigned int *)0x443009c )= 0x00073232;
+
+/*dpu*/
+*((volatile unsigned int *)0x04408024)= 0x00100152;
+*((volatile unsigned int *)0x04408028)= 0x00000000;
+*((volatile unsigned int *)0x04408034)= 0x80000000;
+*((volatile unsigned int *)0x04408038)= 0x00000548;
+*((volatile unsigned int *)0x04408044)= 0x00000000;
+*((volatile unsigned int *)0x04408054)= 0x00000001;
+*((volatile unsigned int *)0x04408058)= 0x0000004d;
+*((volatile unsigned int *)0x0440805c)= 0x00000096;
+*((volatile unsigned int *)0x04408060)= 0x0000001d;
+*((volatile unsigned int *)0x04408064)= 0x000007d6;
+*((volatile unsigned int *)0x04408068)= 0x000007ac;
+*((volatile unsigned int *)0x0440806c)= 0x00000080;
+*((volatile unsigned int *)0x04408070)= 0x00000080;
+*((volatile unsigned int *)0x04408074)= 0x00000796;
+*((volatile unsigned int *)0x04408078)= 0x000007ec;
+*((volatile unsigned int *)0x044080b0)= 0x00000011;
+*((volatile unsigned int *)0x044080cc)= 0x0000004d;
+*((volatile unsigned int *)0x044080d0)= 0x00000096;
+*((volatile unsigned int *)0x044080d4)= 0x0000001d;
+*((volatile unsigned int *)0x044080d8)= 0x000007d6;
+*((volatile unsigned int *)0x044080dc)= 0x000007ac;
+*((volatile unsigned int *)0x044080e0)= 0x00000080;
+*((volatile unsigned int *)0x044080e4)= 0x00000080;
+*((volatile unsigned int *)0x044080e8)= 0x00000796;
+*((volatile unsigned int *)0x044080ec)= 0x000007ec;
+*((volatile unsigned int *)0x04408160)= 0x00000003;
+*((volatile unsigned int *)0x04408164)= 0x0000004d;
+*((volatile unsigned int *)0x04408168)= 0x00000096;
+*((volatile unsigned int *)0x0440816c)= 0x0000001d;
+*((volatile unsigned int *)0x04408170)= 0x000007d6;
+*((volatile unsigned int *)0x04408174)= 0x000007ac;
+*((volatile unsigned int *)0x04408178)= 0x00000080;
+*((volatile unsigned int *)0x0440817c)= 0x00000080;
+*((volatile unsigned int *)0x04408180)= 0x00000796;
+*((volatile unsigned int *)0x04408184)= 0x000007ec;
+*((volatile unsigned int *)0x044081a4)= 0x00000100;
+*((volatile unsigned int *)0x044081a8)= 0x00000100;
+*((volatile unsigned int *)0x044081ac)= 0x00000100;
+*((volatile unsigned int *)0x044081cc)= 0x000000ff;
+*((volatile unsigned int *)0x044081d0)= 0x00000102;
+*((volatile unsigned int *)0x044081d4)= 0x000000ff;
+*((volatile unsigned int *)0x044081d8)= 0x00000102;
+*((volatile unsigned int *)0x044081dc)= 0x000000ff;
+*((volatile unsigned int *)0x044081e0)= 0x00000000;
+*((volatile unsigned int *)0x04408208)= 0x00000008;
+*((volatile unsigned int *)0x0440820c)= 0x00000000;
+*((volatile unsigned int *)0x0440821c)= 0x00000135;
+*((volatile unsigned int *)0x04408228)= 0x00000000;
+*((volatile unsigned int *)0x0440801c)= 0x00000002;
+*((volatile unsigned int *)0x04408020)= 0x00000001;
+*((volatile unsigned int *)0x04408010)= 0x0000000f;
+*((volatile unsigned int *)0x04408020)= 0x00000000;
+*((volatile unsigned int *)0x04408010)= 0x0000000a;
+*((volatile unsigned int *)0x04408010)= 0x0000000a;
+*((volatile unsigned int *)0x04408010)= 0x0000007f;
+
+    end_simulation();
+
+    while(1)
+    {
+	}
+}

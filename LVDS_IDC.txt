@@ -1,0 +1,23 @@
+iice new {IICE7} -type regular
+iice controller -iice {IICE7} none
+iice sampler -iice {IICE7} -depth 16384
+iice sampler -iice {IICE7} -pipe 3
+iice clock -iice {IICE7} -edge positive {/clk_glb5}
+signals add -iice {IICE7} -silent -sample -trigger {u0_digital_top/u0_mm_sys_hard_macro/u_mm_sys/u0_dispc_sys_top/u_lvds_tx/clk_out_cnt}\
+{u0_digital_top/u0_mm_sys_hard_macro/u_mm_sys/u0_dispc_sys_top/u_lvds_tx/clk_out_1x}\
+{u0_digital_top/u0_mm_sys_hard_macro/u_mm_sys/u0_dispc_sys_top/u_lvds_tx/lvds_valid}\
+{u0_digital_top/u0_mm_sys_hard_macro/u_mm_sys/u0_dispc_sys_top/u_lvds_tx/lvds_out_0}\
+{u0_digital_top/u0_mm_sys_hard_macro/u_mm_sys/u0_dispc_sys_top/u_lvds_tx/lvds_out_1}\
+{u0_digital_top/u0_mm_sys_hard_macro/u_mm_sys/u0_dispc_sys_top/u_lvds_tx/lvds_out_2}\
+{u0_digital_top/u0_mm_sys_hard_macro/u_mm_sys/u0_dispc_sys_top/u_lvds_tx/lvds_out_3}\
+{u0_digital_top/u0_mm_sys_hard_macro/u_mm_sys/u0_dispc_sys_top/u_lvds_tx/red}\
+{u0_digital_top/u0_mm_sys_hard_macro/u_mm_sys/u0_dispc_sys_top/u_lvds_tx/grn}\
+{u0_digital_top/u0_mm_sys_hard_macro/u_mm_sys/u0_dispc_sys_top/u_lvds_tx/blu}\
+{u0_digital_top/u0_mm_sys_hard_macro/u_mm_sys/u0_dispc_sys_top/u_lvds_tx/de}\
+{u0_digital_top/u0_mm_sys_hard_macro/u_mm_sys/u0_dispc_sys_top/u_lvds_tx/vs}\
+{u0_digital_top/u0_mm_sys_hard_macro/u_mm_sys/u0_dispc_sys_top/u_lvds_tx/hs}\
+{u0_digital_top/u0_mm_sys_hard_macro/u_mm_sys/u0_dispc_sys_top/u_lvds_tx/fifo_empty_r}\
+{u0_digital_top/u0_mm_sys_hard_macro/u_mm_sys/u0_dispc_sys_top/u_lvds_tx/fifo_full_w}\
+{u0_digital_top/u0_mm_sys_hard_macro/u_mm_sys/u0_dispc_sys_top/u_lvds_tx/fifo_req_w}\
+{u0_digital_top/u0_mm_sys_hard_macro/u_mm_sys/u0_dispc_sys_top/u_lvds_tx/fifo_req_r}\
+{u0_digital_top/u0_mm_sys_hard_macro/u_mm_sys/u0_dispc_sys_top/u_lvds_tx/clk_in_1x}
